@@ -1,0 +1,3 @@
+/Users/mbogudal/Dev/inne/korki_cpp/excersise1/cmake-build-debug/CMakeFiles/excersise1.dir
+/Users/mbogudal/Dev/inne/korki_cpp/excersise1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mbogudal/Dev/inne/korki_cpp/excersise1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
