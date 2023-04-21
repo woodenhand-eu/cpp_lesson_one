@@ -1,6 +1,8 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <fstream>
+#include <filesystem>
 
 // Exercise 1
 // create struct Product with attributes:
@@ -122,7 +124,22 @@ std::pair<std::vector<int>, Product> exercise2() {
     return out;
 }
 
-void exercise3(){
+void exercise3(std::vector<int> vector){
+    std::ofstream outfile("dev/output.txt");
+    std::filesystem::path dir("dev/");
+    if(!std::filesystem::exists(dir)){
+        std::filesystem::create_directories(dir);
+    }
+
+    if (!outfile){
+        std::cerr<<"Error opening file"<<std::endl;
+        return;
+    }
+
+    for(int e : vector){
+        std::cout<<e<<",";
+        outfile<<e<<",";
+    }
 
 }
 
@@ -130,7 +147,9 @@ int main() {
     std::cout<<"Exercise 1"<<std::endl;
     exercise1();
     std::cout<<"Exercise 2"<<std::endl;
-    exercise2();
+    std::vector<int> vector=exercise2().first;
+    std::cout<<"Exercise 3"<<std::endl;
+    exercise3(vector);
 
     return 0;
 }
