@@ -15,6 +15,9 @@
 // create map of products where vector is the key
 // return pair of vector and product with highest vector
 
+// Exercise 3
+// save vector to the file
+
 struct Product {
     std::string name;
     int amount;
@@ -117,6 +120,10 @@ std::pair<std::vector<int>, Product> exercise2() {
     std::cout<<"mean value of vector:"+std::to_string(calculateMean(out.first))<<std::endl;
 
     return out;
+}
+
+void exercise3(){
+
 }
 
 int main() {
